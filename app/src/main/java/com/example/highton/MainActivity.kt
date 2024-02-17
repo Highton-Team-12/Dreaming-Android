@@ -40,25 +40,23 @@ fun BaseApp(){
         }
 
         composable(AppNavigationItem.Main.route){
-            Main(navController)
+            //Main(navController)
         }
     }
 }
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun Main(navController: NavController) {
-    val scaffoldState = rememberScrollState()
-    val navController = rememberNavController()
-
-    Scaffold(
-        modifier = androidx.compose.ui.Modifier
-            .background(black)
-            .padding(
-                bottom = DevicePaddings.navigationBarHeightDp.dp
-            ),
-    ) {
-        NavHost(navController = navController,
-            startDestination = BottomNavigationItem , builder = )
-    }
-}
+//
+//@OptIn(ExperimentalMaterial3Api::class)
+//@Composable
+//fun Main(navController: NavController) {
+//    val scaffoldState = rememberScrollState()
+//    val navController = rememberNavController()
+//
+//    Scaffold(
+//        modifier = androidx.compose.ui.Modifier
+//            .background(black)
+//            .padding(
+//                bottom = DevicePaddings.navigationBarHeightDp.dp
+//            ),
+//    ) {
+//        NavHost(navController = , graph = )
+//}
