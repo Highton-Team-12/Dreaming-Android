@@ -21,6 +21,8 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.dreaming.feature.navigation.BottomNavigationItem
+import com.example.dreaming.ui.component.DreamingTypography.Body2
+import com.example.dreaming.ui.component.DreamingTypography.Body3
 import com.example.dreaming.ui.theme.bottomback
 import com.example.dreaming.ui.theme.dark
 import com.example.dreaming.ui.theme.sub
@@ -65,7 +67,9 @@ fun BottomNavigation(
                     tint = color,
                     modifier = Modifier.size(24.dp)
                 )
-                Body3(text = screen.label, color = color)
+                Body2
+
+//                (text = screen.label, color = color)
             }
         }
     }

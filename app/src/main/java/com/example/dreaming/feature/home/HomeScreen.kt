@@ -1,6 +1,8 @@
 package com.example.dreaming.feature.home
 
+import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 
-class HomeScreen(navController: NavController) {
+@Composable
+fun HomeScreen(navController: NavController) {
 }

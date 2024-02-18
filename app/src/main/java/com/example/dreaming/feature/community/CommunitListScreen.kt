@@ -14,17 +14,16 @@ import com.example.dreaming.feature.navigation.AppNavigationItem
 import kotlinx.coroutines.delay
 
 @Composable
-fun CommunityScreen(navController: NavController) {
+fun CommunitListScreen(navController: NavController) {
     LaunchedEffect(true){
         delay(3000)
-        navController.navigate(AppNavigationItem.CommunitList.route) { popUpTo(0)}
+        navController.navigate(AppNavigationItem.Subtract.route) { popUpTo(0)}
     }
 
     Image(
-        painter = painterResource(id = R.drawable.ic_communit),
+        painter = painterResource(id = R.drawable.ic_community_list),
         contentDescription = null,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 80.dp)
     )
 }

@@ -10,6 +10,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -17,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.dreaming.ui.component.DreamingTypography.Body4
 import com.example.dreaming.ui.theme.black
+import com.example.dreaming.ui.theme.hint
 import com.example.dreaming.ui.theme.main
 import com.example.dreaming.ui.theme.noting
 import com.example.dreaming.ui.theme.white
@@ -36,7 +38,7 @@ fun TextField(
             Box(contentAlignment = Alignment.CenterStart) {
                 if (text.isEmpty()) {
                     Column {
-                        Body4
+                        Body1(placeholder, color = white)
                         Spacer(Modifier.size(4.dp))
                     }
                 }
@@ -50,16 +52,17 @@ fun TextField(
         visualTransformation = if (isSecret) PasswordVisualTransformation() else VisualTransformation.None,
         modifier = Modifier
             .fillMaxWidth()
-            .height(44.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(
-                if (text.isBlank()){ noting }
-                else { white }
-            )
+            .height(55.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(noting)
             .border(
                 width = 1.dp,
-                color = if (text.isBlank()){ black} else { black },
-                shape = RoundedCornerShape(8.dp)
+                color = if (text.isBlank()) {
+                    hint
+                } else {
+                    main
+                },
+                shape = RoundedCornerShape(16.dp)
             )
             .padding(horizontal = 16.dp)
     )

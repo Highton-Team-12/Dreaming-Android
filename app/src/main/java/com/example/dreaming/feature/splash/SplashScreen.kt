@@ -32,7 +32,7 @@ fun SplashScreen(navController: NavController) {
     }
 
     if (navigateToLogin){
-        navController.navigate(AppNavigationItem.Login.route)
+        navController.navigate(AppNavigationItem.Login.route){ popUpTo(0)}
     }
     Box(
     modifier = Modifier

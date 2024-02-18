@@ -10,6 +10,14 @@ sealed class AppNavigationItem(val route: String) {
 
     object Register : AppNavigationItem("register")
 
-    object Home : AppNavigationItem("home")
+    object HIM : AppNavigationItem("him")
+
+    object Mypage : AppNavigationItem("mypage")
+
+    object Communit : AppNavigationItem("communit")
+
+    object Subtract : AppNavigationItem("subtract")
+
+    object CommunitList : AppNavigationItem("communitlist")
 
 }

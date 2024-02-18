@@ -9,6 +9,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.currentComposer
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -18,7 +19,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.dreaming.application.DreamingApp
 import com.example.dreaming.application.PreferenceManager
+import com.example.dreaming.feature.community.CommunitListScreen
 import com.example.dreaming.feature.community.CommunityScreen
+import com.example.dreaming.feature.home.HomeImage
 import com.example.dreaming.feature.home.HomeScreen
 import com.example.dreaming.feature.login.LoginScreen
 import com.example.dreaming.feature.mypage.MypageScreen
@@ -54,6 +57,21 @@ fun BaseApp(){
         }
         composable(AppNavigationItem.Login.route){
             LoginScreen(navController)
+        }
+        composable(AppNavigationItem.HIM.route){
+            HomeImage(navController)
+        }
+        composable(AppNavigationItem.Mypage.route){
+            MypageScreen(navController)
+        }
+        composable(AppNavigationItem.Communit.route){
+            CommunityScreen(navController)
+        }
+        composable(AppNavigationItem.Subtract.route){
+            SubtractScreen(navController)
+        }
+        composable(AppNavigationItem.CommunitList.route){
+            CommunitListScreen(navController)
         }
     }
 }
@@ -100,9 +118,6 @@ fun Main(mainNavController: NavController) {
             composable(BottomNavigationItem.Subtract.route){
                 SubtractScreen(mainNavController)
             }
-
-
-
         }
     }
 }
